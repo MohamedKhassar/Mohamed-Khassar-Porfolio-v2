@@ -87,3 +87,7 @@ body{
 .section{
     @apply pt-20 lg:pt-32
 }
+
+.headline-2{
+    @apply text-3xl lg:leading-tight font-semibold lg:text-4xl max-w-max bg-gradient-to-r from-[#fafafa] to-[#a1a1aa] bg-clip-text text-transparent
+}
