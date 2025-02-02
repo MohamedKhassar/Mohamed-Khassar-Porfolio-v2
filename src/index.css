@@ -22,10 +22,41 @@ body{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    @apply bg-zinc-500
+    @apply bg-zinc-500 transition-colors duration-300
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
+.menu-btn{
+ @apply w-10 h-10 grid place-items-center rounded-xl bg-zinc-500/40 backdrop-blur-2xl cursor-pointer hover:bg-zinc-500/60 active:scale-75 outline-none ring-inset ring-1 ring-zinc-500/20 transition-all duration-300 md:hidden;
+}
+
+.navbar{
+    @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl ring-1 ring-inset ring-zinc-500/5 max-md:scale-90 isolate max-md:blur-sm max-md:opacity-0 max-md:invisible transition-[opacity,transform,filter]
+    md:flex md:static md:mt-0 md:items-center shadow-lg shadow-white/20 backdrop-blur-2xl
+}
+
+.navbar.active{
+    @apply text-zinc-50 scale-100 visible blur-none opacity-100
+}
+
+.nav-link{
+    @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-50/50 hover:text-zinc-50 transition-colors
+}
+.nav-link.active{
+    @apply text-zinc-900 duration-300
+}
+.navbar .active-box{
+    @apply absolute top-2 left-2 right-2 bg-zinc-50 rounded-lg h-9 -z-10 transition-[top,left,width,height] duration-500;
+}
+
+.contact{
+    @apply md:hidden
+}
+
+.btn{
+    @apply max-w-max h-10 md:flex items-center gap-2 px-4 rounded-xl font-medium text-sm ring-1 ring-zinc-50/5 ring-inset
+    transition-[background-color]
+}
+
+.btn-secondary{
+    @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80
 }
