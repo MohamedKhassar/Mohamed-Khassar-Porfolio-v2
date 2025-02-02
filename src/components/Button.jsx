@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"
 
 const ButtonPrimary = ({
     href,
-    target="_self",
-    label,
+    label,    target="_self",
+
     icon,
     classes
 }) => {
@@ -30,7 +30,6 @@ ButtonPrimary.propTypes={
 
 const ButtonOutline = ({
     href,
-    target="_self",
     label,
     icon,
     classes
@@ -39,7 +38,7 @@ const ButtonOutline = ({
     <>
     {
       href?
-      <Link to={href} target={target} className={"btn btn-outline "+classes}>{label} {icon}</Link>
+      <Link to={href}  className={"btn btn-outline "+classes}>{label} {icon}</Link>
     :
     <button className={"btn btn-outline "+classes}></button>
     }
