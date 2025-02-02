@@ -24,9 +24,9 @@ const Header = () => {
                     </button>
                     <Navbar navOpen={navOpen} />
                 </div>
-                <Link to={"/#contact"} className="btn btn-secondary md:justify-self-center capitalize">
+                <a href={"#contact"} className="btn btn-secondary md:justify-self-center capitalize">
                     contact me
-                </Link>
+                </a>
             </div>
         </header>
     )

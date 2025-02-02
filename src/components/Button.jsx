@@ -1,10 +1,8 @@
 import PropTypes from "prop-types"
-import { Link } from "react-router-dom"
-
 const ButtonPrimary = ({
     href,
-    label,    target="_self",
-
+    label,    
+    target="_self",
     icon,
     classes
 }) => {
@@ -12,7 +10,7 @@ const ButtonPrimary = ({
     <>
     {
       href?
-      <Link to={href} target={target} className={"btn btn-primary "+classes}>{label} {icon}</Link>
+      <a href={href} target={target} className={"btn btn-primary "+classes}>{label} {icon}</a>
     :
     <button className={"btn btn-primary "+classes}></button>
     }
@@ -38,7 +36,7 @@ const ButtonOutline = ({
     <>
     {
       href?
-      <Link to={href}  className={"btn btn-outline "+classes}>{label} {icon}</Link>
+      <a href={href}  className={"btn btn-outline "+classes}>{label} {icon}</a>
     :
     <button className={"btn btn-outline "+classes}></button>
     }
