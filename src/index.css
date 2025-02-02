@@ -91,3 +91,7 @@ body{
 .headline-2{
     @apply text-3xl lg:leading-tight font-semibold lg:text-4xl max-w-max bg-gradient-to-r from-[#fafafa] to-[#a1a1aa] bg-clip-text text-transparent
 }
+
+.title-1{
+    @apply text-[22px] font-normal
+}

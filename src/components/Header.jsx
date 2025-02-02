@@ -6,7 +6,7 @@ import { useState } from "react"
 const Header = () => {
     const [navOpen, setNavOpen] = useState(false)
     return (
-        <header className="h-20 fixed top-0 left-0 w-full flex items-center bg-gradient-to-b from-stone-900 to-stone-900/0">
+        <header className="h-20 fixed top-0 left-0 w-full flex items-center bg-gradient-to-b from-stone-900 to-stone-900/0 z-40">
             <div className="flex items-center mx-auto justify-between w-full px-4 md:px-6 md:grid md:grid-cols-[1fr_3fr_1fr]">
                 <Link to={"/"} >
                     <h1>
