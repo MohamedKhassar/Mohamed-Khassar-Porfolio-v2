@@ -1,16 +1,32 @@
 import PropTypes from "prop-types"
 import { AiFillStar } from "react-icons/ai"
-import { FiStar } from "react-icons/fi"
+import gsap from 'gsap';
+
+import { useGSAP } from '@gsap/react';
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const ReviewsCard = ({ content,
     name,
     imgSrc,
-    company, classes }) => {
-        const ratings=Array(5).fill(<AiFillStar className="text-yellow-300 text-[18px]" />)
+    company }) => {
+    const ratings = Array(5).fill(<AiFillStar className="text-yellow-300 text-[18px]" />)
+    useGSAP(() => {
+        gsap.to(".scrub-slide", {
+            scrollTrigger: {
+                trigger: ".scrub-slide",
+                scrub: true,
+                start:"-200% 80%",
+                end:"400% 80%"
+            },
+            x:-1000
+        })
+    })
     return (
         <div className="bg-zinc-800 p-5 rounded-xl min-w-[320px] flex flex-col lg:min-w-[420px]">
             <div className="flex gap-1 items-center mb-3">
-                {ratings.map((rating)=>(
+                {ratings.map((rating) => (
                     rating
                 ))}
             </div>
@@ -19,12 +35,12 @@ const ReviewsCard = ({ content,
             </p>
             <div className="flex items-center gap-2 mt-auto">
                 <figure className="img-box rounded-lg">
-                    <img 
-                    src={imgSrc} 
-                    alt={name}
-                    className="img-cover"
-                    width={44}
-                    height={44}
+                    <img
+                        src={imgSrc}
+                        alt={name}
+                        className="img-cover"
+                        width={44}
+                        height={44}
                     />
                 </figure>
                 <div>
